@@ -2,7 +2,7 @@ CC = cc
 SRC = $(wildcard src/*.c)
 HR = $(wildcard include/*.h)
 OBJ = $(patsubst src/%.c, build/%.o, $(SRC))
-NAME = trc_route
+NAME = _traceroute 
 
 all: $(NAME)
 
