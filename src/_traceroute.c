@@ -1,4 +1,4 @@
-#include "trc_route.h"
+#include <_traceroute.h> 
 
 unsigned		short	csum(unsigned short *buf, int nwords)
 {
@@ -10,7 +10,7 @@ unsigned		short	csum(unsigned short *buf, int nwords)
 	return (unsigned short)(~sum);
 }
 
-void			_trc_route(struct timeval *tv) {
+void			_traceroute(struct timeval *tv) {
 
 	char			packet[PK_SIZE];
 	struct		iphdr	ip_hdr_in;
