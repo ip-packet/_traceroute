@@ -1,4 +1,4 @@
-#include "trc_route.h"
+#include <_traceroute.h> 
 
 _data	g_vars = {
 	.sock = -1,
@@ -19,10 +19,10 @@ void	signal_handler(int sig_num) {
 }
 
 void	print_usage() {
-	printf("TRC_ROUTE\n");
-	printf("- simple traceroute program to trace the route\n\tof a packet across the internet\n");
+	printf("_TRACEROUTE\n");
+	printf("- simple traceroute program to trace the route\n\tof a packet across a network\n");
 	printf("usage:\n");
-	printf("./trc_route DESTINATION [-i=INTERFACE] [-t=TIMEOUT]\n");
+	printf("./_traceroute DESTINATION [-i=INTERFACE] [-t=TIMEOUT]\n");
 	printf("DESTINATION: domain_name/ip_address of the target host\n");
 	printf("-i: optional name of the interface to be used, default %s\n", DEF_IFR);
 	printf("-t: optional number of seconds till network response, default 3\n");
@@ -68,7 +68,7 @@ struct	addrinfo	*getAddr(char *host, char **dest) {
 		signal_handler(1);
 	}
 	*dest = inet_ntoa(((struct sockaddr_in*)res->ai_addr)->sin_addr);
-	printf("TRC_route to %s (%s)\n", host, *dest);
+	printf("TRACing ROUTE to %s (%s)\n", host, *dest);
 	return	res;
 }
 
@@ -104,7 +104,7 @@ int		main(int c, char **v) {
 	}
 	g_vars.src_ip = inet_ntoa(((struct sockaddr_in*)&ifr_ip.ifr_addr)->sin_addr);
 	printf(" ,  from %s (%s)\n", g_vars._ifr, g_vars.src_ip);
-	_trc_route(&tv);
+	_traceroute(&tv);
 	signal_handler(0);
 }
 
