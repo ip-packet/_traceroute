@@ -1,5 +1,5 @@
-#ifndef TRC_ROUTE_H
-# define TRC_ROUTE_H
+#ifndef _TRACEROUTE_H
+# define _TRACEROUTE_H
 
 #include <stdio.h>
 #include <errno.h>
@@ -33,6 +33,6 @@ typedef	struct {
 
 extern	_data	g_vars;
 
-void		_trc_route(struct timeval*);
+void		_traceroute(struct timeval*);
 
 #endif
