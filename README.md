@@ -1,12 +1,10 @@
-# *`TRC_ROUTE`*
-## about
-network tracing utility designed to map the path that data packets take to reach a specified destination. By sending packets with increasing time-to-live (TTL) values, trc_route identifies the routers along the path, providing valuable insights into network topology and potential issues. While offering a fundamental tracing capability, trc_route may have limitations compared to fully featured traceroute tools, such as missing advanced options or detailed hop information.
-## requirements
-- linux
-- root privilege
+# *`_TRCROUTE`*
+
+network tracing utility that maps the path packets take to reach a specified destination. By sending packets with increasing time-to-live (TTL) values.
+
 ## usage
 ```
-$ ./trc_route DESTINATION [-i=INTERFACE] [-t=TIMEOUT]
+$ ./_traceroute DESTINATION [-i=INTERFACE] [-t=TIMEOUT]
 
 DESTINATION: domain_name/ip_address of the target host
          -i: optional name of the interface to be used, default enp0s3
@@ -14,8 +12,8 @@ DESTINATION: domain_name/ip_address of the target host
 ```
 ## example outputs
 ```
-$ ./trc_route 1337.ma
-TRC_route to 1337.ma (104.18.32.248)
+$ ./_traceroute 1337.ma
+_TRACing ROUTE to 1337.ma (104.18.32.248)
  ,  from enp0s3 (10.13.100.30)
  1  10.13.254.254 [10.13.254.254] 0.674 ms
  2  10.21.1.1 [nat.1337.ma] 0.284 ms
@@ -28,7 +26,7 @@ TRC_route to 1337.ma (104.18.32.248)
 ```
 
 ```
-$ ./trc_route 162.252.205.130
+$ ./_traceroute 162.252.205.130
 TRC_route to 162.252.205.130 (162.252.205.130)
  ,  from enp0s3 (10.13.100.30)
  1  10.13.254.254 [10.13.254.254] 0.808 ms
@@ -76,3 +74,7 @@ TRC_route to 162.252.205.130 (162.252.205.130)
 43  162.252.205.156 [it-s.hi-ho.silver] 0.077 ms
 44  162.252.205.130 [bad.horse] 0.027 ms
 ```
+
+## requirements
+- linux
+- root privilege
