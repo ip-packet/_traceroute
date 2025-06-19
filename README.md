@@ -1,4 +1,4 @@
-# *`_TRCROUTE`*
+# *`_traceroute`*
 
 network tracing utility that maps the path packets take to reach a specified destination. By sending packets with increasing time-to-live (TTL) values.
 
