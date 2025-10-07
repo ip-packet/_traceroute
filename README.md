@@ -5,7 +5,7 @@ network tracing utility that maps the path packets take to reach a specified des
 ## usage
 ```
 $ ./_traceroute DESTINATION [-i=INTERFACE] [-t=TIMEOUT]
-
+                                                                                                   
 DESTINATION: domain_name/ip_address of the target host
          -i: optional name of the interface to be used, default enp0s3
          -t: optional number of seconds till network response, default 3
