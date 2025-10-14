@@ -75,6 +75,6 @@ TRC_route to 162.252.205.130 (162.252.205.130)
 44  162.252.205.130 [bad.horse] 0.027 ms
 ```
 
-## requirements
+## requirement
 - linux
 - root privilege
